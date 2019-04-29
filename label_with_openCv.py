@@ -17,7 +17,7 @@ def saveStoredPointsAsXml(file_name, output_folder):
     np_tt[:,0]=np_tt[:,0]/width
     np_tt[:,1]=np_tt[:,1]/length
 
-    np_tt=np.transpose(np_tt)
+   # np_tt=np.transpose(np_tt)
 
     tt_landmarks=ET.SubElement(new_root,"toothTip")
     counter = 1
@@ -27,12 +27,11 @@ def saveStoredPointsAsXml(file_name, output_folder):
         counter+=1
 
 
-
     np_ls=np.array(stored_xy_ls,dtype=np.float)
     np_ls[:,0]=np_ls[:,0]/width
     np_ls[:,1]=np_ls[:,1]/length
 
-    np_ls=np.transpose(np_ls)
+   # np_ls=np.transpose(np_ls)
 
     ls_landmarks=ET.SubElement(new_root,"lipShroud")
     counter = 1
@@ -47,7 +46,7 @@ def saveStoredPointsAsXml(file_name, output_folder):
     np_le[:,0]=np_le[:,0]/width
     np_le[:,1]=np_le[:,1]/length
 
-    np_le=np.transpose(np_le)
+  #  np_le=np.transpose(np_le)
 
     le_landmarks=ET.SubElement(new_root,"liftingEye")
 
@@ -63,7 +62,7 @@ def saveStoredPointsAsXml(file_name, output_folder):
     np_cl[:,0]=np_cl[:,0]/width
     np_cl[:,1]=np_cl[:,1]/length
 
-    np_cl=np.transpose(np_cl)
+  #  np_cl=np.transpose(np_cl)
 
     cl_landmarks=ET.SubElement(new_root,"castLip")
 
@@ -79,7 +78,7 @@ def saveStoredPointsAsXml(file_name, output_folder):
     np_bk[:,0]=np_bk[:,0]/width
     np_bk[:,1]=np_bk[:,1]/length
 
-    np_bk=np.transpose(np_bk)
+   # np_bk=np.transpose(np_bk)
 
     bk_landmarks=ET.SubElement(new_root,"bucketLandmark")
     counter = 1
