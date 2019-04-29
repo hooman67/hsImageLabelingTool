@@ -251,8 +251,8 @@ for (image_nr,image_path) in enumerate(global_image_list):
 
                 fig_name = image_name+'_labeled.png'
 
-                cv2.imwrite(fig_name,overlapped_image)
-
+                cv2.imwrite(output_folder + fig_name,overlapped_image)
+                
                 plt.imshow(cv2.cvtColor(overlapped_image,cv2.COLOR_BGR2RGB))
                 plt.title('image:[%s]:' % image_name)
                 plt.tight_layout()
