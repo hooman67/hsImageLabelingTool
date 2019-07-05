@@ -36,7 +36,7 @@ def saveStoredPointsAsXml(file_name, output_folder):
     ls_landmarks=ET.SubElement(new_root,"lipShroud")
     counter = 1
     for point in np_ls:
-        name = 'lipShroud' + str(counter)
+        name = 'lipShroud_' + str(counter)
         ET.SubElement(ls_landmarks, name, x=str(point[0]), y=str(point[1]))
         counter+=1
 
@@ -52,7 +52,7 @@ def saveStoredPointsAsXml(file_name, output_folder):
 
     counter = 1
     for point in np_le:
-        name = 'liftingEye' + str(counter)
+        name = 'liftingEye_' + str(counter)
         ET.SubElement(le_landmarks, name, x=str(point[0]), y=str(point[1]))
         counter+=1
 
@@ -68,7 +68,7 @@ def saveStoredPointsAsXml(file_name, output_folder):
 
     counter = 1
     for point in np_cl:
-        name = 'castLip' + str(counter)
+        name = 'castLip_' + str(counter)
         ET.SubElement(cl_landmarks, name, x=str(point[0]), y=str(point[1]))
         counter+=1
 
@@ -83,7 +83,7 @@ def saveStoredPointsAsXml(file_name, output_folder):
     bk_landmarks=ET.SubElement(new_root,"bucketLandmark")
     counter = 1
     for point in np_bk:
-        name = 'bucketLandmark' + str(counter)
+        name = 'bucketLandmark_' + str(counter)
         ET.SubElement(bk_landmarks, name, x=str(point[0]), y=str(point[1]))
         counter+=1
 
@@ -191,9 +191,9 @@ def printLabels():
 #####################   Press [p] to print the labels   #####################
 #############################################################################
 '''
-numberOfTeeth = 6
-folder_source = '/media/hooman/961293e3-04a5-40c5-afc0-2b205d0a7067/WM_PROJECT/algorithmDev/wmAlgo_usingWearLandmarsk_optical_hydraulics/try1/imgRegisteration/images/' # location of images to be labeled
-output_folder = '/media/hooman/961293e3-04a5-40c5-afc0-2b205d0a7067/WM_PROJECT/algorithmDev/wmAlgo_usingWearLandmarsk_optical_hydraulics/try1/imgRegisteration/labels/' # where to store the labels 
+numberOfTeeth = 8
+folder_source = '/media/hooman/961293e3-04a5-40c5-afc0-2b205d0a7067/WM_PROJECT/algorithmDev/wmAlgo_usingWearLandmarsk_optical_hydraulics/try1/wmdlLogs_Sishen_cable/PH03_2800/referenceFrames/images/' # location of images to be labeled
+output_folder = '/media/hooman/961293e3-04a5-40c5-afc0-2b205d0a7067/WM_PROJECT/algorithmDev/wmAlgo_usingWearLandmarsk_optical_hydraulics/try1/wmdlLogs_Sishen_cable/PH03_2800/referenceFrames/labels/' # where to store the labels 
 
 global_image_list=glob.glob(folder_source+'*.png') # Generating the list of images to be labeled
 # change the '.jpg' extension if other image types are used...
