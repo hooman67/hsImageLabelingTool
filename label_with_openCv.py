@@ -191,13 +191,12 @@ def printLabels():
 #####################   Press [p] to print the labels   #####################
 #############################################################################
 '''
-numberOfTeeth = 8
-folder_source = '/media/hooman/961293e3-04a5-40c5-afc0-2b205d0a7067/WM_PROJECT/algorithmDev/wmAlgo_usingWearLandmarsk_optical_hydraulics/try1/wmdlLogs_Sishen_cable/PH03_2800/referenceFrames/images/' # location of images to be labeled
-output_folder = '/media/hooman/961293e3-04a5-40c5-afc0-2b205d0a7067/WM_PROJECT/algorithmDev/wmAlgo_usingWearLandmarsk_optical_hydraulics/try1/wmdlLogs_Sishen_cable/PH03_2800/referenceFrames/labels/' # where to store the labels 
+numberOfTeeth = 6
+folder_source = '/media/hooman/961293e3-04a5-40c5-afc0-2b205d0a7067/WM_PROJECT/algorithmDev/wmAlgo_usingWearLandmarsk_optical_hydraulics/try1/wmdlLogs_aitik_Komatsu_SH1142_PC5500_2019-02-26_to_2019-03-10/referenceFrames/temp/i/' # location of images to be labeled
+output_folder = '/media/hooman/961293e3-04a5-40c5-afc0-2b205d0a7067/WM_PROJECT/algorithmDev/wmAlgo_usingWearLandmarsk_optical_hydraulics/try1/wmdlLogs_aitik_Komatsu_SH1142_PC5500_2019-02-26_to_2019-03-10/referenceFrames/temp/o/' # where to store the labels 
 
 global_image_list=glob.glob(folder_source+'*.png') # Generating the list of images to be labeled
 # change the '.jpg' extension if other image types are used...
-
 
 fig = plt.figure()
 plt.ion()
